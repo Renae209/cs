@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+    }
+
+
+    header {
+      background: #ff4da6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 1rem;
+    }
+
+
+    #products {
+      flex: 3;
+    }
+
+
+    #products h2 {
+      color: #d63384;
+      margin-top: 2rem;
+    }
+
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 1rem;
+    }
+
+
+    .card {
+      border: 1px solid #ddd;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+
+    .card button {
+      background: #ff66a3;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 0.5rem;
+    }
+
+
+    .card button:hover {
+      background: #e05591;
+    }
+
+
+    #cart {
+      flex: 1;
+      padding: 1rem;
+      border-left: 2px solid #eee;
+      background: #fff0f6;
+    }
+
+
+    #cart h2 {
+      color: #c2185b;
+    }
+
+
+    #cart ul {
+      list-style: none;
+      padding: 0;
+    }
+
+
+    #cart li {
+      margin: 0.5rem 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+    #cart .remove {
+      background: red;
+      color: white;
+      border: none;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 10px;
+    }
+
+
+    #checkout-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+    }
+
+
+    #checkout-form input {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+
+    #checkout-form button {
+      background: #c2185b;
+      color: white;
+      border: none;
+      padding: 0.7rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+
+    #checkout-form button:hover {
+      background: #a7134b;
+    }
+
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+
+      #cart {
+        border-left: none;
+        border-top: 2px solid #eee;
+        margin-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BalingKPOP Biases</h1>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="aboutus.html">About</a>
+    </nav>
+  </header>
+
+
+  <main>
+    <section id="products">
+      <h2>SEVENTEEN</h2>
+      <div class="grid">
+        <div class="card" data-name="Attaca" data-price="14">
+          <h3>Attaca</h3>
+          <p>$14</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="An Ode" data-price="13">
+          <h3>An Ode</h3>
+          <p>$13</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Face The Sun" data-price="16">
+          <h3>Face The Sun</h3>
+          <p>$16</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Semicolon" data-price="15">
+          <h3>Semicolon</h3>
+          <p>$15</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Your Choice" data-price="14">
+          <h3>Your Choice</h3>
+          <p>$14</p>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <h2>TWICE</h2>
+      <div class="grid">
+        <div class="card" data-name="Feel Special" data-price="18">
+          <h3>Feel Special</h3>
+          <p>$18</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Between 1 & 2" data-price="16">
+          <h3>Between 1 & 2</h3>
+          <p>$16</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Fancy You" data-price="17">
+          <h3>Fancy You</h3>
+          <p>$17</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="What is Love?" data-price="16">
+          <h3>What is Love?</h3>
+          <p>$16</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="STRATEGY" data-price="25">
+          <h3>STRATEGY</h3>
+          <p>$25</p>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <h2>ENHYPEN</h2>
+      <div class="grid">
+        <div class="card" data-name="BORDER:DAY ONE" data-price="14">
+          <h3>BORDER:DAY ONE</h3>
+          <p>$14</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="BORDER:CARNIVAL" data-price="45">
+          <h3>BORDER:CARNIVAL</h3>
+          <p>$45</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="DIMENSION:DILEMMA" data-price="20">
+          <h3>DIMENSION:DILEMMA</h3>
+          <p>$20</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="MANIFESTO:DAY 1" data-price="30">
+          <h3>MANIFESTO:DAY 1</h3>
+          <p>$30</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="DARK BLOOD" data-price="12">
+          <h3>DARK BLOOD</h3>
+          <p>$12</p>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+
+
+      <h2>BTS</h2>
+      <div class="grid">
+        <div class="card" data-name="Love Yourself: Answer" data-price="35">
+          <h3>Love Yourself: Answer</h3>
+          <p>$35</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Skool Luv Affair" data-price="60">
+          <h3>Skool Luv Affair</h3>
+          <p>$60</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Proof" data-price="25">
+          <h3>Proof</h3>
+          <p>$25</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="Butter" data-price="18">
+          <h3>Butter</h3>
+          <p>$18</p>
+          <button class="add">Add to Cart</button>
+        </div>
+        <div class="card" data-name="The Most Beautiful Moment in Life: Young Forever" data-price="80">
+          <h3>The Most Beautiful Moment in Life: Young Forever</h3>
+          <p>$80</p>
+          <button class="add">Add to Cart</button>
+        </div>
+      </div>
+    </section>
+
+
+    <aside id="cart">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: $<span id="total">0</span></p>
+      <form id="checkout-form" action="http://47.129.9.35/cs3/checkout.php" method="post">
+        <input type="text" name="cust_name" placeholder="Name" required>
+        <input type="text" name="cust_addr" placeholder="Address" required>
+        <input type="email" name="cust_email" placeholder="Email" required>
+        <input type="hidden" name="cust_order" id="cust_order">
+        <button type="submit">Checkout</button>
+      </form>
+    </aside>
+  </main>
+
+
+  <script>
+    const cartItems = document.getElementById("cart-items");
+    const totalPrice = document.getElementById("total");
+    let cart = [];
+
+
+    document.querySelectorAll(".add").forEach(button => {
+      button.addEventListener("click", function() {
+        const card = this.parentElement;
+        const prod_name = card.dataset.name;
+        const prod_price = parseInt(card.dataset.price);
+
+
+        cart.push({ prod_name, prod_price });
+        updateCart();
+      });
+    });
+
+
+    function updateCart() {
+      cartItems.innerHTML = "";
+      let total = 0;
+
+
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.innerHTML = `${item.prod_name} - $${item.prod_price} <button class="remove">Remove</button>`;
+        li.querySelector(".remove").addEventListener("click", () => removeFromCart(item));
+        cartItems.appendChild(li);
+        total += item.prod_price;
+      });
+
+
+      totalPrice.textContent = total;
+      document.getElementById("cust_order").value = JSON.stringify(cart);
+    }
+
+
+    function removeFromCart(itemToRemove) {
+      cart = cart.filter(item => item !== itemToRemove);
+      updateCart();
+    }
+  </script>
+</body>
+</html>
+
+

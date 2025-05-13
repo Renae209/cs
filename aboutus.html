@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aboutus</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fefefe;
+      color: #333;
+    }
+
+    header {
+      background: #ff4da6;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.active {
+      text-decoration: underline;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    /* Container wrapper for three small boxes */
+    .container-wrapper {
+      display: flex;
+      justify-content: flex-start; /* Align left instead of center */
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .small-container {
+      flex: 0 0 150px;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      background: #fff;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    @media (max-width: 600px) {
+      .container-wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+      .small-container {
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>BalingKPOP Biases</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+    </nav>
+  </header>
+
+  <main>
+      <h1>About The Company</h1>
+
+    <div class="container-wrapper">
+      <div class="small-container">
+        <h3>AMBAT, Gab</h3>
+        <p>Gab was in charge of coding the technical parts using the GET and he made the checkout page work.</p>
+      </div>
+      <div class="small-container">
+        <h3>DE LOS SANTOS, Renae</h3>
+        <p>Renae was in charge of the base code, setting up the general layout of the products the titles and the whole website plus the About the Company page.</p>
+      </div>
+      <div class="small-container">
+        <h3>SALASALAN, Nhia</h3>
+        <p>Nhia was in charge of the aesthetics of the website, changing the fonts and the colors. She also made the add to cart feature work.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
